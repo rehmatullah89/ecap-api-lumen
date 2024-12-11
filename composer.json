@@ -1,0 +1,71 @@
+{
+  "name": "laravel/lumen",
+  "description": "The Laravel Lumen Framework.",
+  "keywords": [
+    "framework",
+    "laravel",
+    "lumen"
+  ],
+  "license": "MIT",
+  "type": "project",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@gitlab.ideatolife.me:frameworks/backend_lumen_framework.git"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.4",
+    "laravel/lumen-framework": "5.4.4",
+    "doctrine/dbal": "^2.5",
+    "illuminate/mail": "^5.4",
+    "illuminate/redis": "^5.4",
+    "barryvdh/laravel-ide-helper": "^2.2",
+    "vlucas/phpdotenv": "~2.2",
+    "laravelista/lumen-vendor-publish": "^2.0",
+    "idea/framework": "dev-master",
+    "tymon/jwt-auth": "^1.0@dev",
+    "facebook/graph-sdk": "^5.4",
+    "intervention/image": "^2.3",
+    "nordsoftware/lumen-cors": "^1.6",
+    "brozot/laravel-fcm": "^1.2",
+    "laravel/cashier": "~7.0",
+    "doctrine/common": "2.7.0",
+    "nexmo/laravel": "^1.1",
+    "maatwebsite/excel": "~2.1.0",
+    "baum/baum": "~1.1",
+    "mk-j/php_xlsxwriter":"~0.37"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "~1.4",
+    "phpunit/phpunit": "~5.0",
+    "mockery/mockery": "~0.9",
+    "phpmd/phpmd": "@stable",
+    "squizlabs/php_codesniffer": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/",
+      "database/"
+    ],
+    "files": [
+      "app/Helpers/helpers.php",
+      "app/Helpers/Constants/Constants.php"
+    ]
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "secure-http": false
+  }
+}

@@ -1,0 +1,27 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: youssef.jradeh
+ * Date: 5/24/18
+ * Time: 1:32 AM
+ */
+
+namespace App\Models;
+
+use Idea\Base\BaseModel;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class District extends BaseModel {
+	
+	use SoftDeletes;
+	protected $dates = ['deleted_at'];
+	protected $table = 'districts';
+        
+        public function sites() {
+		return $this->hasMany(SiteReference::class);
+	}
+        
+        public function children() {
+		return $this->hasMany(SiteReference::class);
+	}
+}

@@ -1,0 +1,16 @@
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+/public/projects
+/storage
+public/market_place_item_images
+/public/shops
+/public/files
+composer.lock
+laradock
+
+
+
+*.xlsx
